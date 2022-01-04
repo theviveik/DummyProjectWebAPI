@@ -52,6 +52,15 @@ namespace DummyProject
             });
 
         }
+
+        public static void UseSwaggerUIExtension(this IApplicationBuilder app)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dummy Project API V1");
+            });
+        }
     }
 }
 

@@ -2,14 +2,8 @@
 using BusinessAccessLayer.Models;
 using BusinessAccessLayer.Service;
 using DataAccessLayer.DataModel;
-using DataAccessLayer.Interface;
-using DataAccessLayer.Repository;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
 using System.Reflection;
-using System.Text;
 
 namespace DummyProject
 {
@@ -52,11 +46,7 @@ namespace DummyProject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dummy Project API V1");
-                });
+                app.UseSwaggerUIExtension();
             }
             app.ErrorExceptionExtensions(logger);
             
