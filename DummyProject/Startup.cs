@@ -1,8 +1,6 @@
 ﻿using BusinessAccessLayer;
 using BusinessAccessLayer.Models;
 using BusinessAccessLayer.Service;
-using DataAccessLayer.DataModel;
-using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace DummyProject
@@ -20,10 +18,8 @@ namespace DummyProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<DummyProjectContext>(options =>
-            options.UseSqlServer(
-                Configuration.GetSection("ConnectionStrings:name").Value,
-                b => b.MigrationsAssembly(typeof(DummyProjectContext).Assembly.FullName)));
+
+            services.AddDbContexts(Configuration);
 
             //register automapper
             services.AddAutoMapper(Assembly.GetAssembly(typeof(ApplicationMapper)));

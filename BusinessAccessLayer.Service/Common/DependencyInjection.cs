@@ -1,9 +1,8 @@
-﻿using BusinessAccessLayer;
-using BusinessAccessLayer.Service;
-using DataAccessLayer.Interface;
+﻿using DataAccessLayer.Interface;
 using DataAccessLayer.Repository;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace DummyProject
+namespace BusinessAccessLayer.Service
 {
     public static class DependencyInjection
     {

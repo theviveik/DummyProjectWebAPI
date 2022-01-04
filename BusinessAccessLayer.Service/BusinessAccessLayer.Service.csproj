@@ -14,6 +14,7 @@
     <ProjectReference Include="..\BusinessAccessLayer.Models\BusinessAccessLayer.Models.csproj" />
     <ProjectReference Include="..\BusinessAccessLayer\BusinessAccessLayer.Interface.csproj" />
     <ProjectReference Include="..\DataAccessLayer.Interface\DataAccessLayer.Interface.csproj" />
+    <ProjectReference Include="..\DataAccessLayer.Repository\DataAccessLayer.Repository.csproj" />
   </ItemGroup>
 
 </Project>
